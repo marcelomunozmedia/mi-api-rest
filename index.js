@@ -12,7 +12,7 @@ app.get('/usuarios', (req, res) => {
   res.json(usuarios);
 });
 
-app.get('/usuarios/:id, (req, res) => {
+app.get('/usuarios/:id', (req, res) => {
   const user = usuarios.find(u => u.id == req.params.id);
   user ? res.json(user) : res.status(404).send('No encontrado');
 });
